@@ -1,0 +1,41 @@
+.header-footer-bg {
+  background: rgb(171, 169, 201);
+  background: linear-gradient(
+    90deg,
+    rgba(171, 169, 201, 1) 0%,
+    rgba(116, 116, 121, 0.5114496482186625) 35%,
+    rgba(147, 147, 147, 1) 100%
+  );
+}
+
+.body-bg {
+  background: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876014.jpg");
+  background-size: cover;
+}
+
+.footer-bottom {
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  padding-top: 25px;
+  width: 100%;
+}
+
+.description {
+  height: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media (max-width: 998px) {
+  .column {
+    flex-direction: column;
+  }
+
+  .footer-height {
+    height: 100%;
+    padding-bottom: 25px;
+  }
+}
