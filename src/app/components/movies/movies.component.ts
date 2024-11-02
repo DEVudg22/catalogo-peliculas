@@ -13,6 +13,7 @@ import { NgFor } from '@angular/common';
 export class MoviesComponent {
   moviesService = inject(MoviesService);
   movies: any[] = [];
+
   constructor() {
     this.moviesService.getMovies().subscribe((datos) => {
       this.movies = datos;

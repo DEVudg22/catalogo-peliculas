@@ -8,11 +8,12 @@
   <span class="fs-3 text-light">PELÍCULAS DISPONIBLES EN ESTE SITIO</span>
 
   <br /><br />
-  <table class="table table-dark table-hover text-center">
+  <table class="table table-dark table-hover text-start">
     <thead>
-      <tr>
+      <tr class="text-center">
         <th scope="col">CARÁTULA</th>
-        <th scope="col">TÍTULO</th>
+        <th scope="col">DESCRIPCIÓN</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -23,15 +24,18 @@
             alt="caratula {{ movie.title }}"
             width="164"
             height="246"
+            class="mx-3"
           />
         </td>
-        <td>
-          <p class="fs-3 mt-5">{{ movie.title }}</p>
-          <a routerLink="movie/{{ movie.id }}"
-            ><button type="button" class="btn btn-outline-light btn-lg mt-5">
-              VER DETALLE DE PELÍCULA
-            </button></a
-          >
+        <td class="px-5">
+          <p class="fs-4 mt-2">TÍTULO: {{ movie.title }}</p>
+          <p class="fs-6 mt-1">DESCRIPCIÓN: {{ movie.synopsis }}</p>
+          <p class="fs-6 mt-1">AÑO DE LANZAMIENTO: {{ movie.year }}</p>
+        </td>
+        <td class="text-center">
+          <!--button class="btn btn-outline-light btn-lg m-5">
+            EDITAR
+          </button-->
         </td>
       </tr>
     </tbody>
