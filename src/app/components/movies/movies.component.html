@@ -16,18 +16,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let movie of movies; index as i">
         <td>
           <img
-            src="https://www.lavanguardia.com/peliculas-series/images/movie/poster/2022/9/w1280/p5De1zX5Eiramyx3ZPVq4cDWEhM.jpg"
-            alt="caratula de ejemplo"
+            src="{{ movie.cover }}"
+            alt="caratula {{ movie.title }}"
             width="164"
             height="246"
           />
         </td>
         <td>
-          <p class="fs-3 mt-5">DANTE</p>
-          <a routerLink="/movie"
+          <p class="fs-3 mt-5">{{ movie.title }}</p>
+          <a routerLink="movie/{{ movie.id }}"
             ><button type="button" class="btn btn-outline-light btn-lg mt-5">
               VER DETALLE DE PELÍCULA
             </button></a
