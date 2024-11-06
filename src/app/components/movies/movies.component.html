@@ -17,28 +17,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-          <img
-            src="https://media.forbiddenplanet.com/products/95/2e/b2660e7868b2e1ff701d2204e95d16f88e6f.jpg"
-            alt="caratula alien"
-            width="164"
-            height="246"
-            class="mx-3"
-          />
-        </td>
-        <td class="px-5">
-          <p class="fs-4 mt-2">TÍTULO: ALIEN: ROMULUS</p>
-          <p class="fs-6 mt-1">
-            DESCRIPCIÓN: Lorem, ipsum dolor sit amet consectetur adipisicing
-            elit. Magni harum hic modi laboriosam doloribus, dolor saepe eum
-            corrupti! Autem, tenetur.
-          </p>
-          <p class="fs-6 mt-1">AÑO DE LANZAMIENTO: 2024</p>
-        </td>
-        <td></td>
-      </tr>
-      <!--tr *ngFor="let movie of movies; index as i">
+      <tr *ngFor="let movie of movies; index as i">
         <td>
           <img
             src="{{ movie.cover }}"
@@ -54,11 +33,9 @@
           <p class="fs-6 mt-1">AÑO DE LANZAMIENTO: {{ movie.year }}</p>
         </td>
         <td class="text-center">
-          <button class="btn btn-outline-light btn-lg m-5">
-            EDITAR
-          </button>
+          <button class="btn btn-outline-light btn-lg m-5">EDITAR</button>
         </td>
-      </tr-->
+      </tr>
     </tbody>
   </table>
 </div>
