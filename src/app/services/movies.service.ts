@@ -10,15 +10,19 @@ export class MoviesService {
 
   private http = inject(HttpClient);
 
-  //url para el servicio index
-  private urlIndex = environment.apiURL + '/api/all';
-  private urlMovie = environment.apiURL + '/api/movie/';
+  //objeto con las requests
+  private requests = {
+    index: environment.apiURL + '/api/all',
+    movie: environment.apiURL + '/api/movie/',
+  };
 
+  private updateMovie = environment.apiURL + '';
+  private deleteMovie = environment.apiURL + '';
   public getMovies() {
-    return this.http.get<any>(this.urlIndex);
+    return this.http.get<any>(this.requests.index);
   }
 
   public movieDescription(id: any) {
-    return this.http.get<any>(this.urlMovie + id);
+    return this.http.get<any>(this.requests.movie + id);
   }
 }
