@@ -33,9 +33,12 @@
           <p class="fs-6 mt-1">AÑO DE LANZAMIENTO: {{ movie.year }}</p>
         </td>
         <td class="text-center">
-          <!--button class="btn btn-outline-light btn-lg m-5">
-            EDITAR
-          </button-->
+          <button
+            routerLink="/movie/{{ movie.id }}"
+            class="btn btn-outline-light btn-lg m-5"
+          >
+            VER DETALLE
+          </button>
         </td>
       </tr>
     </tbody>
