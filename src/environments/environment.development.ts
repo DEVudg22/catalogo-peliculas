@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiURL: 'https://api-peliculas-production.up.railway.app',
+  apiURL: 'http://localhost:8000',
 };
