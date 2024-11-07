@@ -14,10 +14,9 @@ export class MoviesService {
   private requests = {
     index: environment.apiURL + '/api/all',
     movie: environment.apiURL + '/api/movie/',
+    deleteMovie: environment.apiURL + '/api/delete/',
   };
 
-  private updateMovie = environment.apiURL + '';
-  private deleteMovie = environment.apiURL + '';
   public getMovies() {
     return this.http.get<any>(this.requests.index);
   }

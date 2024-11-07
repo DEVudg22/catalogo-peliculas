@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "prerender": true,
             "outputPath": "dist/catalogo",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -33,7 +34,7 @@
               "node_modules/jquery/dist/jquery.min.js"
             ],
             "server": "src/main.server.ts",
-            "prerender": true,
+
             "ssr": {
               "entry": "server.ts"
             }

@@ -24,4 +24,8 @@ export class MovieComponent {
       this.movie = datos;
     });
   }
+
+  //metodo para eliminar
+
+  //método para actualizar
 }
