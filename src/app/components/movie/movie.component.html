@@ -91,13 +91,33 @@
       </div>
       <div class="modal-body">
         <label for="titulo">Título</label>
-        <input type="text" class="form-control" name="titulo" />
+        <input
+          type="text"
+          class="form-control"
+          name="titulo"
+          value="{{ movie.title }}"
+        />
         <label for="sinopsis">Sinopsis</label>
-        <input type="text" class="form-control" name="sinopsis" />
+        <textarea
+          class="form-control"
+          name="sinopsis"
+          id=""
+          value="{{ movie.synopsis }}"
+        ></textarea>
         <label for="year">Año de lanzamiento</label>
-        <input type="text" class="form-control" name="year" />
+        <input
+          type="text"
+          class="form-control"
+          name="year"
+          value="{{ movie.year }}"
+        />
         <label for="cover">Pega aquí el link de la carátula</label>
-        <input type="text" class="form-control" name="cover" />
+        <input
+          type="text"
+          class="form-control"
+          name="cover"
+          value="{{ movie.cover }}"
+        />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
