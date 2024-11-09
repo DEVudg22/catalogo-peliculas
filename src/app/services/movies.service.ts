@@ -15,6 +15,8 @@ export class MoviesService {
     index: environment.apiURL + '/api/all',
     movie: environment.apiURL + '/api/movie/',
     delete: environment.apiURL + '/api/delete/',
+    addMovie: environment.apiURL + '/api/new-movie',
+    update: environment.apiURL + '/api/update/',
   };
 
   public getMovies() {
@@ -27,5 +29,13 @@ export class MoviesService {
 
   public deleteMovie(id: any) {
     return this.http.delete(this.requests.delete + id);
+  }
+
+  public newMovie(add: any) {
+    return this.http.post(this.requests.addMovie, add);
+  }
+
+  public updateMovie(id: any, add: any) {
+    return this.http.put(this.requests.update + id, add);
   }
 }

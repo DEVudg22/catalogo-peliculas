@@ -5,15 +5,12 @@
 >
 
 <div class="container mt-5 mb-3 description">
-  <span class="fs-3 text-light">PELÍCULAS DISPONIBLES EN ESTE SITIO</span>
-
-  ><button
-    class="btn btn-outline-light btn-lg m-5"
-    data-bs-toggle="modal"
-    data-bs-target="#new"
+  <span class="fs-3 text-light"
+    >PELÍCULAS DISPONIBLES EN ESTE SITIO: {{ totalPeliculas }}</span
   >
-    AGREGAR NUEVA PELÍCULA
-  </button>
+
+  >
+  <app-add></app-add>
 
   <br />
   <table class="table table-dark table-hover text-start">
@@ -44,54 +41,6 @@
   </table>
 </div>
 
-<!--modal para agregar una película-->
-
-<div
-  class="modal fade"
-  id="new"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">NUEVA PELÍCULA</h1>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <label for="titulo">Título</label>
-        <input type="text" class="form-control" name="titulo" />
-        <label for="sinopsis">Sinopsis</label>
-        <textarea class="form-control" name="sinopsis" id=""></textarea>
-        <label for="year">Año de lanzamiento</label>
-        <input type="text" class="form-control" name="year" />
-        <label for="cover">Pega aquí el link de la carátula</label>
-        <input type="text" class="form-control" name="cover" />
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Cancelar
-        </button>
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-dismiss="modal"
-          data-bs-toggle="modal"
-          data-bs-target="#agregada"
-        >
-          AÑADIR PELÍCULA
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Modal Alert -->
 <div
   class="modal fade"
@@ -104,7 +53,12 @@
     <div class="modal-content">
       <div class="modal-body"><p>PELÍCULA AGREGADA CON ÉXITO</p></div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+          (click)="redirect()"
+        >
           OK
         </button>
       </div>

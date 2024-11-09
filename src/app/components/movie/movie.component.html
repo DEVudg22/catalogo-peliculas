@@ -105,6 +105,7 @@
           class="form-control"
           name="titulo"
           value="{{ movie.title }}"
+          [(ngModel)]="updateMovie.title"
         />
         <label for="sinopsis">Sinopsis</label>
         <textarea
@@ -112,6 +113,7 @@
           name="sinopsis"
           id=""
           value="{{ movie.synopsis }}"
+          [(ngModel)]="updateMovie.synopsis"
         ></textarea>
         <label for="year">Año de lanzamiento</label>
         <input
@@ -119,6 +121,7 @@
           class="form-control"
           name="year"
           value="{{ movie.year }}"
+          [(ngModel)]="updateMovie.year"
         />
         <label for="cover">Pega aquí el link de la carátula</label>
         <input
@@ -126,19 +129,29 @@
           class="form-control"
           name="cover"
           value="{{ movie.cover }}"
+          [(ngModel)]="updateMovie.cover"
         />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cancelar
         </button>
-        <button type="button" class="btn btn-primary">GUARDAR CAMBIOS</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          data-bs-toggle="modal"
+          data-bs-target="#alert-update"
+          (click)="actualizar(movie.id)"
+        >
+          GUARDAR CAMBIOS
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Modal Alert -->
+<!-- Modal Alert ELIMINACION -->
 <div
   class="modal fade"
   id="alert"
@@ -155,6 +168,31 @@
           class="btn btn-secondary"
           data-bs-dismiss="modal"
           (click)="redirect()"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Alert ACTUALIZACION -->
+<div
+  class="modal fade"
+  id="alert-update"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body"><p>DATOS ACTUALIZADOS CORRECTAMENTE</p></div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+          (click)="refresh()"
         >
           OK
         </button>
