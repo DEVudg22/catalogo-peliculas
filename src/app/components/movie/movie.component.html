@@ -64,7 +64,16 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cancelar
         </button>
-        <button type="button" class="btn btn-primary">Eliminar</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          data-bs-toggle="modal"
+          data-bs-target="#alert"
+          (click)="borrar(movie.id)"
+        >
+          Eliminar
+        </button>
       </div>
     </div>
   </div>
@@ -124,6 +133,31 @@
           Cancelar
         </button>
         <button type="button" class="btn btn-primary">GUARDAR CAMBIOS</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Alert -->
+<div
+  class="modal fade"
+  id="alert"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body"><p>PELÍCULA ELIMINADA</p></div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+          (click)="redirect()"
+        >
+          OK
+        </button>
       </div>
     </div>
   </div>

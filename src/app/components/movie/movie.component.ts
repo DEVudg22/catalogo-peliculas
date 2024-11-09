@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { MoviesService } from '../../services/movies.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie',
@@ -16,7 +17,7 @@ export class MovieComponent {
   movie: any;
   idMovie: any = 0;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
     this.route.params.subscribe((params) => (this.idMovie = params['id']));
@@ -26,6 +27,13 @@ export class MovieComponent {
   }
 
   //metodo para eliminar
+  borrar(id: any) {
+    this.moviesService.deleteMovie(id).subscribe();
+  }
+
+  redirect() {
+    this.router.navigate(['/movies']);
+  }
 
   //método para actualizar
 }
