@@ -6,39 +6,29 @@
 
 <div class="container mt-5 mb-3 description">
   <span class="fs-3 text-light"
-    >PELÍCULAS DISPONIBLES EN ESTE SITIO: {{ totalPeliculas }}</span
+    >PELÍCULAS DISPONIBLES: {{ totalPeliculas }}</span
   >
 
   >
   <app-add></app-add>
 
   <br />
-  <table class="table table-dark table-hover text-start">
-    <thead></thead>
-    <tbody>
-      <tr *ngFor="let movie of movies; index as i">
-        <td>
-          <img
-            src="{{ movie.cover }}"
-            alt="caratula {{ movie.title }}"
-            width="164"
-            height="246"
-            class="mx-5"
-          />
-        </td>
-        <td class="px-5 text-center">
-          <p class="fs-2 mt-2">{{ movie.title }}</p>
 
-          <button
-            routerLink="/movie/{{ movie.id }}"
-            class="btn btn-outline-light btn-lg m-5"
-          >
-            VER DETALLE
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div
+    class="container d-flex flex-wrap justify-content-center align-items-center gap-5"
+  >
+    <div *ngFor="let movie of movies; index as i">
+      <a routerLink="/movie/{{ movie.id }}">
+        <img
+          src="{{ movie.cover }}"
+          alt="caratula {{ movie.title }}"
+          width="197"
+          height="295"
+          class="border"
+        />
+      </a>
+    </div>
+  </div>
 </div>
 
 <!-- Modal Alert -->

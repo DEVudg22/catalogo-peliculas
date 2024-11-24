@@ -1,21 +1,31 @@
 <div class="container-fluid">
   <app-header></app-header>
+  <div class="d-flex flex-wrap">
+    <div class="container mt-5 mb-3 p-5 description text-light">
+      <p class="fs-3 text-center">ACERCA DEL SITIO:</p>
+      <p class="fs-4 text-justify">
+        Este sitio tiene la finalidad de mostrar un catálogo de películas con su
+        información básica: título, sinopsis, año de lanzamiento y su carátula.
+        Para acceder da click en el menú superior, podrás añadir una nueva
+        película, editarlas y eliminarlas de forma interactiva.
+      </p>
+    </div>
 
-  <div class="container mt-5 mb-3 description">
-    <p class="text-light text-center fs-3">
-      <span class="fs-2">DESCRIPCION DEL CATÁLOGO:</span> <br /><br />
-      Este sitio tiene la finalidad de mostrar un catálogo de películas con su
-      información básica: título, sinopsis, año de lanzamiento y su carátula.<br />
-      Para acceder da click en el siguiente botón, podrás añadir una nueva
-      película, editarlas y eliminarlas de forma interactiva.
-      <br />
-      <a routerLink="/movies"
-        ><button type="button" class="btn btn-outline-light btn-lg mt-5">
-          VER CATÁLOGO DE PELÍCULAS
-        </button></a
-      >
-    </p>
+    <div
+      class="container mt-2 mb-3 description d-flex flex-column justify-content-center align-items-center"
+    >
+      <p class="text-light fs-3 text-center">TRAILER DEL MOMENTO</p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VQIxX-VwrDI?si=6IYp2Ri4tnED3twK"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
   </div>
-
   <app-footer></app-footer>
 </div>

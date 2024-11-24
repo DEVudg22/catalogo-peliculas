@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Pompiere&display=swap");
+
 .header-footer-bg {
   background: rgb(171, 169, 201);
   background: linear-gradient(
@@ -8,14 +10,18 @@
   );
 }
 
+.title {
+  font-family: "Bungee Spice";
+  font-weight: 400;
+  font-size: 4rem;
+}
+
 .body-bg {
-  background: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876014.jpg");
+  background: url("https://img.freepik.com/vector-gratis/fondo-degradado-lineas-azules-dinamicas_23-2148995756.jpg");
   background-size: cover;
 }
 
 .footer-bottom {
-  position: fixed;
-  bottom: 0;
   height: 100px;
   padding-top: 25px;
   width: 100%;
@@ -25,8 +31,15 @@
   height: 100%;
 }
 
-.hidden {
-  visibility: hidden;
+.footer-bg {
+  background: rgb(78, 78, 78);
+  background: radial-gradient(
+    circle,
+    rgba(78, 78, 78, 1) 0%,
+    rgba(76, 77, 106, 1) 47%,
+    rgba(54, 36, 36, 1) 100%
+  );
+  font-family: "Pompiere", sans-serif;
 }
 
 @media (max-width: 998px) {
@@ -34,8 +47,15 @@
     flex-direction: column;
   }
 
-  .footer-height {
+  .hidden {
+    visibility: hidden;
+  }
+
+  .footer-bottom {
     height: 100%;
-    padding-bottom: 25px;
+  }
+
+  .title {
+    font-size: 3rem;
   }
 }
