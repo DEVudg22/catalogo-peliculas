@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiURL: 'https://api-peliculas-production.up.railway.app',
+  apiURL: 'https://api-peliculas-gwd.gulliferwd.com',
 };
